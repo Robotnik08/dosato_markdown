@@ -1,35 +1,26 @@
-# Template library for Dosato
+# Markdown to HTML
 
-This is a template library for Dosato, a programming language.<br>
-More information about Dosato can be found [here](https://github.com/Robotnik08/cdosato).
+## Description
 
-## How to use
+This is a simple library for parsing markdown files and converting them to HTML in Dosato
 
-This repository contains the dosato_source folder, in this folder you must put `dosato.h` and `libdosato.dll/so`, You get them in the same folder Dosato installs too, which you can download here: [official repository](https://github.com/Robotnik08/cdosato).<br>
+## Usage
 
-To use this library, you need to include the `dosato.h` file in your project and link the `libdosato`.dll` or `libdosato.so` file to your project.<br>
+```dosato
+import "markdown" // Import the library
 
-If you have Dosato installed, you can find the .dll/.so file in the installed Dosato directory.<br>
+do write("test.html", markdown_to_html(read("test.md"))) // read your file (string) and convert it to HTML, then write it to a file
+```
 
-For this particular demo, use the following command to compile the program:<br>
+## Compiling
+
+Make sure you have make installed on your system, alongside a C compiler (gcc, clang, etc.)<br>
+
 ```bash
 make
 ```
 
-This will generate the .dll or .so file for your library.<br><br>
+## Dependencies
 
-To test and use your library from within Dosato, open your script file and use the `import` keyword to import your library.<br>
-Dosato will automatically append the .dll or .so file to the path you provide in the import statement.<br>
-
-```dosato
-import "path/to/your/library";
-```
-
-After importing your library, you can use the functions defined in your library.<br>
-```dosato
-import "path/to/your/library";
-
-do sayln(sumTest(5, 10));
-```
-
-The `test.to` file in contains an example of how to use this specifc library.<br>
+This library uses `md4c` for parsing markdown files. You can find that library [here](https://github.com/mity/md4c/)<br>
+Credits to them for this amazing library :)
