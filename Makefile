@@ -5,14 +5,14 @@ CC = gcc
 CFLAGS = -Wall -Werror -Wno-format
 
 # Include directories
-INCLUDES = -I./dosato_source -I./src/include
+INCLUDES = -I./dosato_source -I./
 
 # Linker flags
 LDFLAGS_WINDOWS = -L./dosato_source -llibdosato -L./src/lib -lmingw32
 LDFLAGS_LINUX = -L./dosato_source -ldosato -L./src/lib -lm -Wno-format -fPIC
 
 # Source files
-SRCS = main.c
+SRCS = main.c $(wildcard src/*.c)
 
 # Object files
 OBJS = $(SRCS:.c=.o)

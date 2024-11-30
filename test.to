@@ -1,4 +1,4 @@
 import "markdown"
 
-do write("test.html", markdown_parse(read("test.md")))
-
+do write("test.html", markdown_to_html(read("test.md")))
+do sayln("test.html generated")
