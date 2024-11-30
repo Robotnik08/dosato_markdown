@@ -20,6 +20,19 @@ Make sure you have make installed on your system, alongside a C compiler (gcc, c
 make
 ```
 
+## Specifications
+
+### Functions
+
+#### string markdown_to_html(string markdown) // Convert a markdown string to HTML
+
+This function takes a markdown string and converts it to HTML. It supports the CommonMark specification, and can be used to convert markdown files to HTML.
+
+```dosato
+do sayln(markdown_to_html("# Hello, World!")) // <h1>Hello, World!</h1>
+```
+
+
 ## Dependencies
 
 This library uses `md4c` for parsing markdown files. You can find that library [here](https://github.com/mity/md4c/)<br>
