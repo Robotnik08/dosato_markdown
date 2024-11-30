@@ -24,7 +24,7 @@ make
 
 ### Functions
 
-#### string markdown_to_html(string markdown) // Convert a markdown string to HTML
+#### string markdown_to_html(string markdown)
 
 This function takes a markdown string and converts it to HTML. It supports the CommonMark specification, and can be used to convert markdown files to HTML.
 
