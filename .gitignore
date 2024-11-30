@@ -1,5 +1,6 @@
 .vscode
 *.o
-my_lib.dll
+markdown.dll
 libdosato.dll
 dosato.h
+test.html
